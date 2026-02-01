@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Otonom Su Altı Aracı | Şevket Akbulut</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+<!-- NAV -->
+<nav class="border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
+        <a href="index.html" class="text-white font-semibold hover:text-green-400">
+            ← Ana Sayfa
+        </a>
+        <span class="text-gray-400">Proje Detayı</span>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="max-w-7xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-bold text-white mb-4">
+        Otonom Su Altı Aracı
+    </h1>
+    <p class="text-gray-400 max-w-3xl">
+        Görüntü işleme ve derin öğrenme teknikleri kullanılarak geliştirilen,
+        hat takibi ve engel algılama yeteneklerine sahip otonom su altı aracı.
+    </p>
+</section>
+
+<!-- COVER IMAGE -->
+<section class="max-w-7xl mx-auto px-6">
+    <div class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden flex justify-center">
+        <img src="img/akintay.jpeg" class="w-[400px] h-[400px] object-cover">
+    </div>
+</section>
+
+
+<!-- CONTENT -->
+<section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-12">
+
+    <!-- SOL TARAF -->
+    <div class="md:col-span-2 space-y-8">
+
+        <div>
+            <h2 class="text-2xl font-semibold text-white mb-2">Projenin Amacı</h2>
+            <p class="text-gray-400">
+                Su altında belirlenen bir hattı otonom şekilde takip edebilen,
+                karşılaştığı engelleri algılayıp karar verebilen bir araç geliştirmek.
+                Sistem, klasik görüntü işleme ile derin öğrenmeyi birlikte kullanmaktadır.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-white mb-2">
+                Hat Takibi (OpenCV)
+            </h2>
+            <p class="text-gray-400">
+                Hat takibi işlemi, kameradan alınan gerçek zamanlı görüntüler üzerinde
+                OpenCV kullanılarak gerçekleştirildi.
+            </p>
+
+            <ul class="list-disc list-inside text-gray-400 mt-3 space-y-2">
+                <li>Görüntü gri tona çevrildi</li>
+                <li>Eşikleme (thresholding) uygulandı</li>
+                <li>Kontur tespiti ile hat belirlendi</li>
+                <li>Hattın merkezine göre yön kontrolü sağlandı</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-white mb-2">
+                Engel Algılama (CNN Modeli)
+            </h2>
+            <p class="text-gray-400">
+                Engel algılama aşamasında, tarafımdan eğitilen bir
+                <span class="text-green-400 font-medium">Convolutional Neural Network (CNN)</span>
+                modeli kullanıldı.
+            </p>
+
+            <ul class="list-disc list-inside text-gray-400 mt-3 space-y-2">
+                <li>Su altı ortamına ait görüntülerle özel veri seti oluşturuldu</li>
+                <li>Model, engel / engel yok şeklinde sınıflandırma yapacak şekilde eğitildi</li>
+                <li>Gerçek zamanlı kamera akışından alınan kareler modele verildi</li>
+                <li>Model çıktısına göre aracın hareketi dinamik olarak değiştirildi</li>
+            </ul>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-white mb-2">
+                Sistem Mimarisi
+            </h2>
+            <p class="text-gray-400">
+                Hat takibi ve engel algılama işlemleri paralel çalışacak şekilde tasarlandı.
+                Karar mekanizması, her iki sistemden gelen çıktıları birleştirerek
+                motor kontrol sinyallerini üretti.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-semibold text-white mb-2">
+                Kazanımlar
+            </h2>
+            <p class="text-gray-400">
+                Bu proje sayesinde görüntü işleme, derin öğrenme,
+                gömülü sistemler ve donanım–yazılım entegrasyonu
+                konularında ileri seviye deneyim kazandım.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- SAĞ TARAF -->
+    <div class="space-y-6">
+
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 class="text-white font-semibold mb-3">Kullanılan Teknolojiler</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">
+                Python<br>
+                OpenCV<br>
+                Convolutional Neural Networks (CNN)<br>
+                Raspberry Pi<br>
+                Kamera Sensörleri<br>
+                Servo Motor Kontrolü
+            </p>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
+            <h3 class="text-white font-semibold mb-3">Çalışma Türü</h3>
+            <p class="text-gray-400 text-sm">
+                Gerçek zamanlı görüntü işleme ve karar verme
+            </p>
+        </div>
+
+        <a href="https://github.com/mehmetsevketakbulut/Teknofest-Akintay.git"
+           target="_blank"
+           class="block text-center bg-green-500 text-gray-900 py-3 rounded hover:bg-green-400 transition">
+            GitHub Repo
+        </a>
+
+    </div>
+
+</section>
+
+<footer class="text-center text-sm text-gray-600 py-6">
+    © 2026 Şevket Akbulut
+</footer>
+
+</body>
+</html>

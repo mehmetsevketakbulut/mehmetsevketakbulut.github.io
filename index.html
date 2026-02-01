@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mehmet Şevket Akbulut | Kişisel Web Sitesi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+<!-- NAVBAR -->
+<nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur border-b border-slate-700 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <!-- SOL: Profil Foto + İsim -->
+        <div class="flex items-center gap-3">
+            <img 
+                src="img/pp.jpeg"
+                alt="Mehmet Şevket Akbulut"
+                class="w-9 h-9 rounded-full object-cover border-2 border-green-400 shadow-md"
+            >
+            <span class="text-white font-semibold tracking-wide">
+               Mehmet Şevket Akbulut
+            </span>
+        </div>
+
+        <!-- SAĞ: Menü -->
+        <div class="space-x-6 text-sm text-gray-300">
+            <a href="#basarilar" class="hover:text-green-400 transition">Başarılar</a>
+            <a href="#deneyap" class="hover:text-green-400 transition">Deneyap</a>
+            <a href="#projeler" class="hover:text-green-400 transition">Projeler</a>
+            <a href="#hakkimda" class="hover:text-green-400 transition">Hakkımda</a>
+            <a href="#iletisim" class="hover:text-green-400 transition">İletişim</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+    <div>
+        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Mehmet Şevket Akbulut</h1>
+        <p class="text-lg text-gray-400">Yazılım Mühendisliği 2. Sınıf Öğrencisi</p>
+        <p class="text-gray-500 mt-1">Yapay Zekâ • Gömülü Sistemler • Girişimcilik</p>
+
+        <p class="italic text-gray-400 mt-6">
+            “Fikirden sahaya, projeden sunuma.”
+        </p>
+
+        <div class="mt-10 flex justify-center gap-4">
+            <a href="#basarilar" class="px-6 py-3 bg-green-500 text-gray-900 rounded hover:bg-green-400">
+                Başarılarım
+            </a>
+            <a href="cv2.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-gray-700 rounded hover:border-green-400">
+        CV İndir
+    </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- BAŞARILAR -->
+<section id="basarilar" class="max-w-7xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-bold text-white mb-12">Başarılar</h2>
+
+    <div class="space-y-16">
+
+        <!-- TARSUS -->
+        <div class="border-l-4 border-green-500 pl-6">
+            <h3 class="text-xl font-semibold text-white">TARSUS – Eğitim Kampı</h3>
+            <p class="text-gray-400 mt-2 max-w-3xl">
+                Akıllı tarım odaklı TARSUS projesi kapsamında katıldığımız eğitim kampı.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 mt-6">
+                <img src="img/kamp.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+                <img src="img/demo1.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+                <img src="img/demo2.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+            </div>
+        </div>
+
+        <!-- DEMO DAY -->
+        <div class="border-l-4 border-green-500 pl-6">
+            <h3 class="text-xl font-semibold text-white">Teknofest 2025 – Demo Day</h3>
+            <p class="text-gray-400 mt-2 max-w-3xl">
+                MVP’nin jüri ve yatırımcılara sunulduğu Demo Day etkinliği.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 mt-6">
+                <img src="img/demo4.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+                <img src="img/demo5.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+                <img src="img/demo6.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+            </div>
+        </div>
+
+        <!-- ÖDÜL -->
+        <div class="border-l-4 border-green-500 pl-6">
+            <h3 class="text-xl font-semibold text-white">Ödül Töreni</h3>
+            <p class="text-gray-400 mt-2 max-w-3xl">
+                Projenin yenilikçi yaklaşımı sayesinde ödül alınması.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 mt-6">
+                <img src="img/odul3.jpeg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+                <img src="img/odul2.jpeg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+                <img src="img/1.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- DENEYAP -->
+<section id="deneyap" class="bg-gray-800 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <a href="deneyap.html" class="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-400 transition relative">
+    <h3 class="text-xl font-semibold text-white mb-2">Deneyap Teknoloji Atölyeleri</h3>
+    <p class="text-gray-400">9. sınıfta başladığım kapsamlı teknoloji eğitimleri.</p>
+
+    <!-- Sağ alt köşedeki detay butonu -->
+    <span class="absolute bottom-4 right-4 text-green-400 font-medium hover:underline cursor-pointer text-sm">
+        Detayları Gör →
+    </span>
+</a>
+    </div>
+</section>
+
+<!-- PROJELER -->
+<section id="projeler" class="max-w-7xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-bold text-white mb-12">Projeler</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+<a href="kutuphane.html" class="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-400 transition relative">
+    <h3 class="text-xl font-semibold text-white mb-2">Kütüphane Otomasyon Sistemi</h3>
+    <p class="text-gray-400">Java & OOP tabanlı masaüstü sistem.</p>
+
+    <!-- Sağ alt köşe -->
+    <span class="absolute bottom-4 right-4 text-green-400 font-medium hover:underline cursor-pointer text-sm">
+        Detayları Gör →
+    </span>
+</a>
+
+<a href="sualti.html" class="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-400 transition relative">
+    <h3 class="text-xl font-semibold text-white mb-2">Otonom Su Altı Aracı Su Altı Görevi Yazılımı</h3>
+    <p class="text-gray-400">Hat takibi ve engel algılama yapan AUV.</p>
+
+    <!-- Sağ alt köşe -->
+    <span class="absolute bottom-4 right-4 text-green-400 font-medium hover:underline cursor-pointer text-sm">
+        Detayları Gör →
+    </span>
+</a>
+
+
+    </div>
+</section>
+
+<!-- HAKKIMDA -->
+<section id="hakkimda" class="bg-gray-800 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-white mb-6">Hakkımda</h2>
+        <p class="text-gray-400 max-w-3xl">
+            Yazılım Mühendisliği 2. sınıf öğrencisiyim. Teknolojiye olan merakım ve merakımı somut projelere dönüştürme isteğim,
+            beni genç yaşta kodlamaya ve inovatif fikirler üretmeye yönlendirdi. <span class="text-green-400 font-medium">Yazılım Kulübü Başkanı</span> olarak
+            sadece projeler ve teknik etkinlikler düzenlemekle kalmıyor, aynı zamanda takım arkadaşlarımı motive etmeyi, birlikte öğrenmeyi ve
+            yeni çözümler üretmeyi önemsiyorum. 
+            <br><br>
+            Motom: <em>“Fikirden sahaya, projeden sunuma.”</em> Bu motivasyonla yapay zekâ, gömülü sistemler ve ileri teknoloji alanlarında
+            kendimi sürekli geliştiriyor, gelecekte savunma sanayii ve milli teknoloji hamlesine katkı sağlayacak projeler üretmeyi hedefliyorum.
+            Her yeni proje, benim için bir öğrenme ve kendini aşma fırsatı.
+        </p>
+    </div>
+</section>
+
+
+<!-- İLETİŞİM -->
+<section id="iletisim" class="py-16 text-center">
+    <h2 class="text-2xl font-bold text-white mb-4">İletişim</h2>
+    <p class="text-gray-400">
+        <a href="mailto:mehmetsevketakbulut@gmail.com" class="hover:text-green-400 transition">mehmetsevketakbulut@gmail.com</a>
+    </p>
+    <p class="text-gray-400 mt-1 space-x-4">
+        <a href="https://www.linkedin.com/in/sevketakbulut" target="_blank" class="hover:text-green-400 transition">LinkedIn</a>
+        •
+        <a href="https://github.com/mehmetsevketakbulut" target="_blank" class="hover:text-green-400 transition">GitHub</a>
+    </p>
+</section>
+
+
+<footer class="text-center text-sm text-gray-600 py-6">
+    © 2026 Şevket Akbulut
+</footer>
+
+<!-- IMAGE MODAL -->
+<div id="imgModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
+    <img id="modalImg" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+</div>
+
+<script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+
+    document.querySelectorAll(".zoomable").forEach(img => {
+        img.addEventListener("click", () => {
+            modalImg.src = img.src;
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        });
+    });
+
+    modal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modalImg.src = "";
+    });
+</script>
+
+</body>
+</html>
