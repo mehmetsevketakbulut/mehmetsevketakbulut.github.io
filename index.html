@@ -5,213 +5,297 @@
     <title>Mehmet Şevket Akbulut | Kişisel Web Sitesi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
         html { scroll-behavior: smooth; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .image-fade { animation: fadeIn 0.5s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        /* Yanıp sönen imleç efekti */
+        .cursor-blink { animation: blink 1s step-end infinite; }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
     </style>
 </head>
 
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-gray-900 text-gray-200 antialiased font-sans">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur border-b border-slate-700 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 z-50">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 md:py-4 flex flex-col md:flex-row justify-between items-center gap-3">
 
-        <!-- SOL: Profil Foto + İsim -->
         <div class="flex items-center gap-3">
             <img 
                 src="img/pp.jpeg"
                 alt="Mehmet Şevket Akbulut"
-                class="w-9 h-9 rounded-full object-cover border-2 border-green-400 shadow-md"
+                class="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover border-2 border-green-500 shadow-lg"
             >
-            <span class="text-white font-semibold tracking-wide">
+            <span class="text-white font-semibold tracking-wide text-sm md:text-lg">
                Mehmet Şevket Akbulut
             </span>
         </div>
 
-        <!-- SAĞ: Menü -->
-        <div class="space-x-6 text-sm text-gray-300">
-            <a href="#basarilar" class="hover:text-green-400 transition">Başarılar</a>
-            <a href="#deneyap" class="hover:text-green-400 transition">Deneyap</a>
-            <a href="#projeler" class="hover:text-green-400 transition">Projeler</a>
-            <a href="#hakkimda" class="hover:text-green-400 transition">Hakkımda</a>
-            <a href="#iletisim" class="hover:text-green-400 transition">İletişim</a>
+        <div class="flex space-x-2 md:space-x-6 text-sm text-gray-300 overflow-x-auto w-full md:w-auto justify-start md:justify-center no-scrollbar px-1 py-1">
+            <a href="#basarilar" class="px-3 py-1 bg-gray-800/50 rounded-full hover:bg-green-500 hover:text-white transition whitespace-nowrap">Başarılar</a>
+            <a href="#deneyap" class="px-3 py-1 bg-gray-800/50 rounded-full hover:bg-green-500 hover:text-white transition whitespace-nowrap">Deneyap</a>
+            <a href="#projeler" class="px-3 py-1 bg-gray-800/50 rounded-full hover:bg-green-500 hover:text-white transition whitespace-nowrap">Projeler</a>
+            <a href="#hakkimda" class="px-3 py-1 bg-gray-800/50 rounded-full hover:bg-green-500 hover:text-white transition whitespace-nowrap">Hakkımda</a>
+            <a href="#iletisim" class="px-3 py-1 bg-gray-800/50 rounded-full hover:bg-green-500 hover:text-white transition whitespace-nowrap">İletişim</a>
         </div>
 
     </div>
 </nav>
 
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
-    <div>
-        <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Mehmet Şevket Akbulut</h1>
-        <p class="text-lg text-gray-400">Yazılım Mühendisliği 2. Sınıf Öğrencisi</p>
-        <p class="text-gray-500 mt-1">Yapay Zekâ • Gömülü Sistemler • Girişimcilik</p>
+<section class="min-h-screen flex items-center justify-center text-center px-4 pt-24 pb-12 bg-gradient-to-b from-gray-900 via-gray-900 to-gray-800">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+            Geleceği Kodlayan <br> <span class="text-green-500">Mühendis</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-gray-300 mb-6">Mehmet Şevket Akbulut</p>
 
-        <p class="italic text-gray-400 mt-6">
+        <div class="h-8 md:h-10 mb-6 flex justify-center items-center">
+            <span class="text-green-400 font-mono text-lg md:text-2xl font-medium" id="typewriter"></span>
+            <span class="text-green-400 text-lg md:text-2xl cursor-blink ml-1">|</span>
+        </div>
+
+        <p class="text-xs md:text-sm text-gray-500 uppercase tracking-widest font-medium mb-10">
+            Yapay Zekâ • Gömülü Sistemler • Girişimcilik
+        </p>
+
+        <p class="italic text-gray-400 text-lg border-l-4 border-green-500 pl-4 inline-block mb-10">
             “Fikirden sahaya, projeden sunuma.”
         </p>
 
-        <div class="mt-10 flex justify-center gap-4">
-            <a href="#basarilar" class="px-6 py-3 bg-green-500 text-gray-900 rounded hover:bg-green-400">
-                Başarılarım
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="#basarilar" class="w-full sm:w-auto px-8 py-4 bg-green-600 text-white font-bold rounded-lg shadow-lg hover:bg-green-500 hover:scale-105 transition transform">
+                Başarılarımı Gör
             </a>
-            <a href="cv2.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 border border-gray-700 rounded hover:border-green-400">
-        CV İndir
-    </a>
-
+            <a href="cv2.pdf" target="_blank" class="w-full sm:w-auto px-8 py-4 bg-gray-800 border border-gray-600 text-white rounded-lg hover:border-green-500 hover:text-green-400 transition">
+                CV İndir
+            </a>
         </div>
     </div>
 </section>
 
-<!-- BAŞARILAR -->
-<section id="basarilar" class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-3xl font-bold text-white mb-12">Başarılar</h2>
+<section id="basarilar" class="max-w-7xl mx-auto px-4 md:px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-16 border-b border-gray-800 pb-6">Başarılar</h2>
 
-    <div class="space-y-16">
+    <div class="space-y-20">
 
-        <!-- TARSUS -->
-        <div class="border-l-4 border-green-500 pl-6">
-            <h3 class="text-xl font-semibold text-white">TARSUS – Eğitim Kampı</h3>
-            <p class="text-gray-400 mt-2 max-w-3xl">
-                Akıllı tarım odaklı TARSUS projesi kapsamında katıldığımız eğitim kampı.
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-4 mt-6">
-                <img src="img/kamp.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-                <img src="img/demo1.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-                <img src="img/demo2.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+        <div class="bg-gray-800/30 p-4 md:p-8 rounded-2xl border border-gray-800">
+            <div class="border-l-4 border-green-500 pl-4 mb-6">
+                <h3 class="text-2xl font-bold text-white">TARSUS – Eğitim Kampı</h3>
+                <p class="text-gray-400 mt-2">Akıllı tarım odaklı TARSUS projesi kapsamında katıldığımız eğitim kampı.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/kamp.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/demo1.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/demo2.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
             </div>
         </div>
 
-        <!-- DEMO DAY -->
-        <div class="border-l-4 border-green-500 pl-6">
-            <h3 class="text-xl font-semibold text-white">Teknofest 2025 – Demo Day</h3>
-            <p class="text-gray-400 mt-2 max-w-3xl">
-                MVP’nin jüri ve yatırımcılara sunulduğu Demo Day etkinliği.
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-4 mt-6">
-                <img src="img/demo4.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-                <img src="img/demo5.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-                <img src="img/demo6.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+        <div class="bg-gray-800/30 p-4 md:p-8 rounded-2xl border border-gray-800">
+            <div class="border-l-4 border-green-500 pl-4 mb-6">
+                <h3 class="text-2xl font-bold text-white">Teknofest 2025 – Demo Day</h3>
+                <p class="text-gray-400 mt-2">MVP’nin jüri ve yatırımcılara sunulduğu Demo Day etkinliği.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/demo4.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/demo5.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/demo6.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
             </div>
         </div>
 
-        <!-- ÖDÜL -->
-        <div class="border-l-4 border-green-500 pl-6">
-            <h3 class="text-xl font-semibold text-white">Ödül Töreni</h3>
-            <p class="text-gray-400 mt-2 max-w-3xl">
-                Projenin yenilikçi yaklaşımı sayesinde ödül alınması.
-            </p>
-
-            <div class="grid md:grid-cols-3 gap-4 mt-6">
-                <img src="img/odul3.jpeg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-                <img src="img/odul2.jpeg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-                <img src="img/1.jpg" class="rounded-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+        <div class="bg-gray-800/30 p-4 md:p-8 rounded-2xl border border-gray-800">
+            <div class="border-l-4 border-green-500 pl-4 mb-6">
+                <h3 class="text-2xl font-bold text-white">Ödül Töreni</h3>
+                <p class="text-gray-400 mt-2">Projenin yenilikçi yaklaşımı sayesinde ödül alınması.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/odul3.jpeg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/odul2.jpeg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable">
+                    <img src="img/1.jpg" class="w-full h-64 md:h-72 object-cover transition-transform duration-500 group-hover:scale-110">
+                </div>
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- DENEYAP -->
-<section id="deneyap" class="bg-gray-800 py-24">
-    <div class="max-w-7xl mx-auto px-6">
-      <a href="deneyap.html" class="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-400 transition relative">
-    <h3 class="text-xl font-semibold text-white mb-2">Deneyap Teknoloji Atölyeleri</h3>
-    <p class="text-gray-400">9. sınıfta başladığım kapsamlı teknoloji eğitimleri.</p>
-
-    <!-- Sağ alt köşedeki detay butonu -->
-    <span class="absolute bottom-4 right-4 text-green-400 font-medium hover:underline cursor-pointer text-sm">
-        Detayları Gör →
-    </span>
-</a>
+<section id="deneyap" class="py-20 bg-gray-800">
+    <div class="max-w-7xl mx-auto px-4 md:px-6">
+      <a href="deneyap.html" class="block relative group overflow-hidden rounded-2xl border border-gray-700 hover:border-green-500 transition-colors bg-gray-900 p-8 md:p-12">
+        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
+            <svg class="w-32 h-32 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11H9v2h2v-2zm0-8H9v6h2V5z"/></svg>
+        </div>
+        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-green-400 transition">Deneyap Teknoloji Atölyeleri</h3>
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl">9. sınıfta başladığım kapsamlı teknoloji eğitimleri ve atölye süreçlerim.</p>
+        <div class="mt-6 flex items-center text-green-500 font-semibold">
+            Detayları İncele 
+            <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </div>
+      </a>
     </div>
 </section>
 
-<!-- PROJELER -->
-<section id="projeler" class="max-w-7xl mx-auto px-6 py-24">
-    <h2 class="text-3xl font-bold text-white mb-12">Projeler</h2>
+<section id="projeler" class="max-w-7xl mx-auto px-4 md:px-6 py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12">Projeler</h2>
 
-    <div class="grid md:grid-cols-2 gap-8">
-<a href="kutuphane.html" class="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-400 transition relative">
-    <h3 class="text-xl font-semibold text-white mb-2">Kütüphane Otomasyon Sistemi</h3>
-    <p class="text-gray-400">Java & OOP tabanlı masaüstü sistem.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <a href="kutuphane.html" class="flex flex-col bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:border-green-500 hover:shadow-2xl transition group h-full">
+            <div class="p-8 flex-1">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition">Kütüphane Otomasyon Sistemi</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">Python ve Nesne Yönelimli Programlama (OOP) prensipleri kullanılarak geliştirilmiş kapsamlı masaüstü yönetim sistemi.</p>
+                <div class="flex gap-2 mb-4">
+                    <span class="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">Python</span>
+                    <span class="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">SQL</span>
+                    <span class="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">Flask</span>
+                </div>
+            </div>
+            <div class="bg-gray-700/50 p-4 flex justify-between items-center">
+                <span class="text-sm text-gray-400">Proje Detayları</span>
+                <span class="text-green-400 font-bold group-hover:translate-x-1 transition">→</span>
+            </div>
+        </a>
 
-    <!-- Sağ alt köşe -->
-    <span class="absolute bottom-4 right-4 text-green-400 font-medium hover:underline cursor-pointer text-sm">
-        Detayları Gör →
-    </span>
-</a>
-
-<a href="sualti.html" class="block bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-green-400 transition relative">
-    <h3 class="text-xl font-semibold text-white mb-2">Otonom Su Altı Aracı Su Altı Görevi Yazılımı</h3>
-    <p class="text-gray-400">Hat takibi ve engel algılama yapan AUV.</p>
-
-    <!-- Sağ alt köşe -->
-    <span class="absolute bottom-4 right-4 text-green-400 font-medium hover:underline cursor-pointer text-sm">
-        Detayları Gör →
-    </span>
-</a>
-
+        <a href="sualti.html" class="flex flex-col bg-gray-800 rounded-2xl border border-gray-700 overflow-hidden hover:border-green-500 hover:shadow-2xl transition group h-full">
+            <div class="p-8 flex-1">
+                <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-green-400 transition">Otonom Su Altı Aracı (AUV)</h3>
+                <p class="text-gray-400 leading-relaxed mb-4">Görüntü işleme ile hat takibi yapan, engelleri algılayan ve otonom görevleri yerine getiren su altı aracı yazılımı.</p>
+                <div class="flex gap-2 mb-4">
+                    <span class="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">Python</span>
+                    <span class="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">OpenCV</span>
+                    <span class="px-3 py-1 bg-gray-700 text-xs rounded-full text-gray-300">Yapay Zeka</span>
+                </div>
+            </div>
+            <div class="bg-gray-700/50 p-4 flex justify-between items-center">
+                <span class="text-sm text-gray-400">Proje Detayları</span>
+                <span class="text-green-400 font-bold group-hover:translate-x-1 transition">→</span>
+            </div>
+        </a>
 
     </div>
 </section>
 
-<!-- HAKKIMDA -->
-<section id="hakkimda" class="bg-gray-800 py-24">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-6">Hakkımda</h2>
-        <p class="text-gray-400 max-w-3xl">
-            Yazılım Mühendisliği 2. sınıf öğrencisiyim. Teknolojiye olan merakım ve merakımı somut projelere dönüştürme isteğim,
-            beni genç yaşta kodlamaya ve inovatif fikirler üretmeye yönlendirdi. <span class="text-green-400 font-medium">Yazılım Kulübü Başkanı</span> olarak
-            sadece projeler ve teknik etkinlikler düzenlemekle kalmıyor, aynı zamanda takım arkadaşlarımı motive etmeyi, birlikte öğrenmeyi ve
-            yeni çözümler üretmeyi önemsiyorum. 
-            <br><br>
-            Motom: <em>“Fikirden sahaya, projeden sunuma.”</em> Bu motivasyonla yapay zekâ, gömülü sistemler ve ileri teknoloji alanlarında
-            kendimi sürekli geliştiriyor, gelecekte savunma sanayii ve milli teknoloji hamlesine katkı sağlayacak projeler üretmeyi hedefliyorum.
-            Her yeni proje, benim için bir öğrenme ve kendini aşma fırsatı.
-        </p>
+<section id="hakkimda" class="py-20 bg-gray-900 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
+        <div class="absolute -top-24 -left-24 w-96 h-96 bg-green-600 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+        <h2 class="text-3xl font-bold text-white mb-8">Hakkımda</h2>
+        <div class="bg-gray-800/80 backdrop-blur p-8 md:p-12 rounded-2xl shadow-2xl border border-gray-700">
+            <p class="text-gray-300 leading-loose text-lg">
+                Yazılım Mühendisliği 2. sınıf öğrencisiyim. Teknolojiye olan merakım ve merakımı somut projelere dönüştürme isteğim,
+                beni genç yaşta kodlamaya ve inovatif fikirler üretmeye yönlendirdi. 
+                <span class="text-green-400 font-bold border-b border-green-400/30 pb-0.5">Yazılım Kulübü Başkanı</span> olarak
+                sadece projeler ve teknik etkinlikler düzenlemekle kalmıyor, aynı zamanda takım arkadaşlarımı motive etmeyi, birlikte öğrenmeyi ve
+                yeni çözümler üretmeyi önemsiyorum. 
+                <br><br>
+                Mottom: <em class="text-white font-serif text-xl">“Fikirden sahaya, projeden sunuma.”</em> <br>
+                Bu motivasyonla yapay zekâ, gömülü sistemler ve ileri teknoloji alanlarında kendimi sürekli geliştiriyor, gelecekte savunma sanayii ve milli teknoloji hamlesine katkı sağlayacak projeler üretmeyi hedefliyorum.
+            </p>
+        </div>
     </div>
 </section>
 
-
-<!-- İLETİŞİM -->
-<section id="iletisim" class="py-16 text-center">
-    <h2 class="text-2xl font-bold text-white mb-4">İletişim</h2>
-    <p class="text-gray-400">
-        <a href="mailto:mehmetsevketakbulut@gmail.com" class="hover:text-green-400 transition">mehmetsevketakbulut@gmail.com</a>
-    </p>
-    <p class="text-gray-400 mt-1 space-x-4">
-        <a href="https://www.linkedin.com/in/sevketakbulut" target="_blank" class="hover:text-green-400 transition">LinkedIn</a>
-        •
-        <a href="https://github.com/mehmetsevketakbulut" target="_blank" class="hover:text-green-400 transition">GitHub</a>
-    </p>
+<section id="iletisim" class="py-24 text-center px-6 bg-gray-800">
+    <h2 class="text-3xl font-bold text-white mb-8">İletişim</h2>
+    <div class="flex flex-col items-center gap-6">
+        <a href="mailto:mehmetsevketakbulut@gmail.com" class="text-xl md:text-2xl text-green-400 font-medium hover:underline transition">
+            mehmetsevketakbulut@gmail.com
+        </a>
+        <div class="flex items-center gap-6 mt-2">
+            <a href="https://www.linkedin.com/in/sevketakbulut" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-slate-700 rounded-full hover:bg-slate-600 hover:text-green-400 transition border border-gray-600">
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/mehmetsevketakbulut" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-slate-700 rounded-full hover:bg-slate-600 hover:text-green-400 transition border border-gray-600">
+                <span>GitHub</span>
+            </a>
+        </div>
+    </div>
 </section>
 
-
-<footer class="text-center text-sm text-gray-600 py-6">
-    © 2026 Şevket Akbulut
+<footer class="text-center text-sm text-gray-500 py-10 bg-gray-900 border-t border-gray-800">
+    © 2026 Şevket Akbulut • Tasarım & Kodlama
 </footer>
 
-<!-- IMAGE MODAL -->
-<div id="imgModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-    <img id="modalImg" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+<div id="imgModal" class="fixed inset-0 bg-black/95 backdrop-blur-sm hidden items-center justify-center z-[100] p-2 md:p-8 cursor-zoom-out transition-opacity duration-300">
+    <button class="absolute top-5 right-5 text-white text-4xl font-bold hover:text-green-500 z-[101]">&times;</button>
+    <img id="modalImg" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain border border-gray-800">
 </div>
 
 <script>
+    /* TYPEWRITER (DAKTİLO) EFEKTİ */
+    const textElement = document.getElementById('typewriter');
+    // Yazılacak metinler dizisi
+    const phrases = [
+        "Yazılım Mühendisliği Öğrencisiyim.",
+        "Yapay Zeka Geliştiricisiyim.",
+        "Gömülü Sistemler Tutkunuyum.",
+        "Teknofest Finalistiyim."
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+            textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(type, 1500); // Yazı tamamlanınca bekleme süresi
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 300); // Silinince bekleme süresi
+        } else {
+            setTimeout(type, isDeleting ? 40 : 80); // Yazma/Silme hızı
+        }
+    }
+
+    /* MODAL VE DİĞER İŞLEMLER */
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("modalImg");
 
-    document.querySelectorAll(".zoomable").forEach(img => {
-        img.addEventListener("click", () => {
-            modalImg.src = img.src;
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
+    document.querySelectorAll(".zoomable").forEach(container => {
+        container.addEventListener("click", () => {
+            const img = container.querySelector("img");
+            if(img) {
+                modalImg.src = img.src;
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+                document.body.style.overflow = "hidden";
+            }
         });
     });
 
@@ -219,8 +303,166 @@
         modal.classList.add("hidden");
         modal.classList.remove("flex");
         modalImg.src = "";
+        document.body.style.overflow = "auto";
+    });
+
+    // Sayfa yüklenince daktiloyu başlat
+    document.addEventListener('DOMContentLoaded', type);
+</script>
+<div class="fixed bottom-6 right-6 z-[9999]">
+    
+    <button id="chatToggleBtn" class="w-14 h-14 bg-green-600 rounded-full shadow-2xl flex items-center justify-center hover:bg-green-500 hover:scale-110 transition duration-300 group">
+        <svg id="chatOpenIcon" class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+        <svg id="chatCloseIcon" class="hidden w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+
+    <div id="chatWindow" class="hidden absolute bottom-20 right-0 w-[350px] md:w-[400px] h-[500px] bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl flex flex-col overflow-hidden transform scale-95 opacity-0 transition-all duration-300 origin-bottom-right">
+        
+        <div class="bg-slate-800 p-4 border-b border-slate-700 flex items-center gap-3 shrink-0">
+            <div class="relative">
+                <img src="img/pp.jpeg" class="w-10 h-10 rounded-full border border-green-500 object-cover">
+                <span class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-slate-800 rounded-full"></span>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-sm">Şevket AI Asistan</h3>
+                <p class="text-xs text-green-400">Çevrimiçi • Yapay Zeka</p>
+            </div>
+        </div>
+
+        <div id="chatMessages" class="flex-1 min-h-0 p-4 overflow-y-auto space-y-4 bg-gray-900/50 scroll-smooth">
+            <div class="flex gap-3">
+                <img src="img/pp.jpeg" class="w-8 h-8 rounded-full border border-green-500 object-cover mt-1 shrink-0">
+                <div class="bg-slate-800 text-gray-200 text-sm p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl max-w-[85%] border border-slate-700">
+                    Selam! Ben Şevket'in dijital ikiziyim. 🤖 <br>
+                    Projelerim, eğitimim veya yeteneklerim hakkında bana her şeyi sorabilirsin.
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 bg-slate-800 border-t border-slate-700 shrink-0">
+            <form id="chatForm" class="relative">
+                <input 
+                    type="text" 
+                    id="userInput"
+                    placeholder="Bir soru sor..." 
+                    class="w-full bg-slate-900 text-white text-sm rounded-full pl-4 pr-12 py-3 border border-slate-600 focus:border-green-500 focus:outline-none focus:ring-1 focus:ring-green-500 placeholder-gray-500"
+                    autocomplete="off"
+                >
+                <button type="submit" class="absolute right-2 top-2 p-1.5 bg-green-600 rounded-full hover:bg-green-500 transition text-white">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                </button>
+            </form>
+            <div class="text-[10px] text-center text-gray-500 mt-2">
+                Powered by ŞevketGPT
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggleBtn = document.getElementById('chatToggleBtn');
+    const chatWindow = document.getElementById('chatWindow');
+    const openIcon = document.getElementById('chatOpenIcon');
+    const closeIcon = document.getElementById('chatCloseIcon');
+    const chatForm = document.getElementById('chatForm');
+    const userInput = document.getElementById('userInput');
+    const messagesDiv = document.getElementById('chatMessages');
+
+    // Pencere Aç/Kapa
+    toggleBtn.addEventListener('click', () => {
+        const isHidden = chatWindow.classList.contains('hidden');
+        if (isHidden) {
+            chatWindow.classList.remove('hidden');
+            setTimeout(() => {
+                chatWindow.classList.remove('scale-95', 'opacity-0');
+                chatWindow.classList.add('scale-100', 'opacity-100');
+                // Açıldığında en alta kaydır
+                scrollToBottom();
+            }, 10);
+            openIcon.classList.add('hidden');
+            closeIcon.classList.remove('hidden');
+        } else {
+            chatWindow.classList.remove('scale-100', 'opacity-100');
+            chatWindow.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                chatWindow.classList.add('hidden');
+            }, 300);
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+        }
+    });
+
+    // Otomatik Kaydırma Fonksiyonu
+    function scrollToBottom() {
+        setTimeout(() => {
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+        }, 50); // DOM güncellenmesi için küçük bir gecikme
+    }
+
+    // Mesaj Ekleme
+    function addMessage(text, isUser = false) {
+        const div = document.createElement('div');
+        div.className = isUser ? 'flex gap-3 justify-end' : 'flex gap-3';
+        
+        const content = isUser 
+            ? `<div class="bg-green-600 text-white text-sm p-3 rounded-tl-xl rounded-bl-xl rounded-br-xl max-w-[85%] shadow-lg break-words">${text}</div>`
+            : `<img src="img/pp.jpeg" class="w-8 h-8 rounded-full border border-green-500 object-cover mt-1 shrink-0">
+               <div class="bg-slate-800 text-gray-200 text-sm p-3 rounded-tr-xl rounded-bl-xl rounded-br-xl max-w-[85%] border border-slate-700 shadow-lg break-words">${text}</div>`;
+
+        div.innerHTML = content;
+        messagesDiv.appendChild(div);
+        
+        // DÜZELTME: Mesaj eklendiğinde o mesaja odaklan ve kaydır
+        scrollToBottom();
+    }
+
+    // Yazıyor Efekti
+    function showTyping() {
+        const div = document.createElement('div');
+        div.id = 'typingIndicator';
+        div.className = 'flex gap-3';
+        div.innerHTML = `
+            <img src="img/pp.jpeg" class="w-8 h-8 rounded-full border border-green-500 object-cover mt-1 shrink-0">
+            <div class="bg-slate-800 p-4 rounded-tr-xl rounded-bl-xl rounded-br-xl border border-slate-700 flex gap-1 items-center h-10">
+                <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></span>
+                <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-100"></span>
+                <span class="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-200"></span>
+            </div>
+        `;
+        messagesDiv.appendChild(div);
+        scrollToBottom();
+    }
+
+    function removeTyping() {
+        const el = document.getElementById('typingIndicator');
+        if(el) el.remove();
+    }
+
+    // Form Gönder
+    chatForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const text = userInput.value.trim();
+        if (!text) return;
+
+        addMessage(text, true);
+        userInput.value = '';
+
+        showTyping();
+
+        setTimeout(() => {
+            removeTyping();
+            
+            let response = "Bunu şu an anlayamadım ama yakında OpenAI beynim takılınca cevaplayabileceğim! 🧠";
+            const lowerText = text.toLowerCase();
+
+            if(lowerText.includes('proje')) response = "Şu anda Akıllı Tarım (TARSUS) ve Otonom Su Altı Aracı projeleri üzerinde çalışıyorum. Detaylar sitemde var!";
+            if(lowerText.includes('dil') || lowerText.includes('yetenek')) response = "Python, Java, C++, Flask ve SQL konularında yetkinim. Ayrıca Gömülü Sistemlerle ilgileniyorum.";
+            if(lowerText.includes('merhaba') || lowerText.includes('selam')) response = "Selam! Nasıl yardımcı olabilirim?";
+            if(lowerText.includes('iletişim') || lowerText.includes('mail')) response = "Bana mehmetsevketakbulut@gmail.com adresinden ulaşabilirsin.";
+
+            addMessage(response, false);
+        }, 1500);
     });
 </script>
-
 </body>
 </html>

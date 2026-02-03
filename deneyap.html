@@ -4,120 +4,206 @@
     <meta charset="UTF-8">
     <title>Deneyap Teknoloji Atölyeleri | Şevket Akbulut</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
+        .glass-panel { background: rgba(31, 41, 55, 0.7); backdrop-filter: blur(10px); }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-gray-900 text-gray-200 font-sans antialiased selection:bg-green-500 selection:text-white">
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 w-full bg-slate-900/90 backdrop-blur border-b border-slate-700 z-50">
+<nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="img/pp.jpeg" alt="Şevket Akbulut" class="w-9 h-9 rounded-full object-cover border-2 border-green-400 shadow-md">
-            <span class="text-white font-semibold tracking-wide">Mehmet Şevket Akbulut</span>
-        </div>
-        <div class="space-x-6 text-sm text-gray-300">
-            <a href="index.html" class="hover:text-green-400 transition">Ana Sayfa</a>
-            <a href="#egitimler" class="hover:text-green-400 transition">Eğitimler</a>
-            <a href="#sertifikalar" class="hover:text-green-400 transition">Sertifikalar</a>
-        </div>
+        <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-green-400 transition group">
+            <span class="text-xl group-hover:-translate-x-1 transition-transform">←</span>
+            <span class="font-semibold">Ana Sayfaya Dön</span>
+        </a>
+        <span class="text-xs md:text-sm text-gray-500 border border-gray-700 px-3 py-1 rounded-full">Eğitim & Sertifikalar</span>
     </div>
 </nav>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center justify-center text-center px-6">
-    <div class="max-w-2xl text-left">
-    <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Deneyap Teknoloji Atölyeleri</h1>
-    <p class="text-gray-400 text-lg">
-       9. sınıfta Deneyap Teknoloji Atölyeleri’ne katılarak genç yaşta teknolojiyle tanıştım. Deneyap, Türkiye’de milli teknoloji hamlesini desteklemek ve çocuklara erken yaşta bilimsel düşünceyi kazandırmak amacıyla Selçuk Bayraktar öncülüğünde kurulmuş bir eğitim platformudur. Kuruluş vizyonunu ve hedeflerini inceledikçe, yalnızca teori değil; proje odaklı, uygulamalı ve disiplinli bir eğitim anlayışıyla gençlerin geleceğin mühendisleri olarak yetiştirilmeleri hedeflendiğini gördüm. Bu süreçte robotik, gömülü sistemler, yazılım teknolojileri, ileri robotik ve elektronik alanlarında kapsamlı eğitimler aldım. Deneyap sayesinde, milli teknoloji vizyonunu benimseyerek mühendislik yolculuğuma erken bir adım atma fırsatı buldum ve kendi projelerimi geliştirme, yenilikçi çözümler üretme motivasyonumu güçlendirdim. Genç yaşta teknolojiyi keşfetmek ve bu alanda aktif rol almak, gelecekte Türkiye’nin teknoloji alanında daha güçlü adımlar atmasına katkıda bulunma hedefimi pekiştirdi.
-    </p>
-    <a href="index.html#deneyap" class="mt-6 inline-block px-6 py-3 bg-green-500 text-gray-900 rounded hover:bg-green-400 transition">
-        Ana Sayfaya Dön
-    </a>
-</div>
+<section class="pt-32 pb-12 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            
+            <div class="lg:w-3/5 space-y-6">
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-medium text-green-300 bg-green-900/30 border border-green-800 rounded-full">Milli Teknoloji Hamlesi</span>
+                    <span class="px-3 py-1 text-xs font-medium text-blue-300 bg-blue-900/30 border border-blue-800 rounded-full">3 Yıllık Eğitim</span>
+                </div>
 
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                    Deneyap <span class="text-green-500">Teknoloji</span> Atölyeleri
+                </h1>
+                
+                <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700 backdrop-blur-sm">
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        9. sınıfta başladığım bu serüven, teknolojiyle profesyonel anlamda tanışmamı sağladı. 
+                        <strong>Selçuk Bayraktar</strong> öncülüğünde kurulan bu platformda, sadece teorik bilgi değil; 
+                        proje odaklı, disiplinli ve inovatif bir mühendislik eğitimi aldım. 
+                        <br><br>
+                        Gömülü sistemlerden yapay zekaya, havacılıktan nanoteknolojiye kadar geniş bir yelpazede 
+                        aldığım eğitimler, bugünkü mühendislik vizyonumun temel taşlarını oluşturdu.
+                    </p>
+                </div>
+            </div>
 
-    <div class="md:w-1/3 flex justify-end">
-        <img src="img/odul2.jpeg" alt="Deneyap Eğitimleri"
-             class="rounded-full shadow-lg w-64 h-64 object-cover zoomable cursor-zoom-in hover:opacity-90 transition border-4 border-gray-700">
-    </div>
-</section>
+            <div class="lg:w-2/5 flex justify-center lg:justify-end">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-teal-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                    <img src="img/odul2.jpeg" alt="Deneyap"
+                         class="relative w-full max-w-sm rounded-2xl shadow-2xl border border-gray-700 bg-gray-800 object-cover h-[400px]">
+                </div>
+            </div>
 
-<!-- EĞİTİMLER -->
-<!-- EĞİTİMLER -->
-<section id="egitimler" class="max-w-7xl mx-auto px-6 py-24 flex flex-col md:flex-row items-start gap-8">
-    <!-- Sol taraf metin -->
-    <div class="md:w-2/3">
-        <h2 class="text-3xl font-bold text-white mb-12">Aldığım Eğitimler</h2>
-        <ul class="list-disc list-inside space-y-4 text-gray-400">
-          
-        <li>Tasarım ve Üretim</li>
-        <li>Robotik ve Kodlama
-        <li>Elektronik Programlama ve Nesnelerin İnterneti</li>
-        <li>Yazılım Teknolojileri</li>
-        <li>İleri Robotik</li>
-        <li>Malzeme Bilimi ve Nanoteknoloji</li>
-        <li>Havacılık ve Uzay Teknolojileri</li>
-        <li>Mobil Uygulama</li>
-        <li>Tematik Takımların Kurulması ve Uluslararası Proje Yarışmalarına Katılım Sağlanması</li>
-        <li>İleri Robotik</li>
-        </ul>
-    </div>
-
-    <!-- Sağ taraf tek fotoğraf -->
-    <div class="md:w-1/3">
-        <img src="img/alinan.png" alt="Deneyap Eğitimleri" class="rounded-lg shadow-lg w-full zoomable cursor-zoom-in hover:opacity-90 transition">
-    </div>
-</section>
-
-
-
-
-<!-- SERTİFİKALAR -->
-<section id="sertifikalar" class="bg-gray-800 py-24">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-12">Sertifikalarım</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <img src="img/tasarim.png" class="rounded-lg shadow-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-            <img src="img/elektronik.png" class="rounded-lg shadow-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-            <img src="img/havacilik.png" class="rounded-lg shadow-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-            <img src="img/mobil.png" class="rounded-lg shadow-lg zoomable cursor-zoom-in hover:opacity-90 transition">
-            <img src="img/nano.png" class="rounded-lg shadow-lg zoomable cursor-zoom-in hover:opacity-90 transition">
         </div>
     </div>
 </section>
 
-<section id="mezuniyet" class="bg-gray-800 py-24">
+<section id="egitimler" class="max-w-7xl mx-auto px-6 py-12">
+    <div class="flex flex-col md:flex-row gap-12">
+        
+        <div class="md:w-2/3">
+            <h2 class="text-3xl font-bold text-white mb-8 border-b border-gray-800 pb-4">Aldığım Eğitimler</h2>
+            
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Tasarım ve Üretim</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Robotik ve Kodlama</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Elektronik Prog. & IoT</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Yazılım Teknolojileri</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">İleri Robotik</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Malzeme Bilimi & NanoTek</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Havacılık ve Uzay</span>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-800 rounded-lg border border-gray-700 hover:border-green-500/50 transition group">
+                    <div class="w-2 h-2 bg-green-500 rounded-full group-hover:scale-150 transition"></div>
+                    <span class="text-gray-300">Mobil Uygulama</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/3">
+            <div class="sticky top-24">
+                <div class="overflow-hidden rounded-xl border border-gray-700 shadow-xl group cursor-zoom-in zoomable bg-gray-800">
+                    <img src="img/alinan.png" alt="Eğitim Tablosu" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                </div>
+                <p class="text-center text-sm text-gray-500 mt-2">Dönemlik Eğitim Planı</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="sertifikalar" class="py-20 bg-gray-800/50 mt-12">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-white mb-12">Mezuniyet Diploması</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <img src="img/mezun.png" class="rounded-lg shadow-lg zoomable cursor-zoom-in hover:opacity-90 transition">
+        
+        <div class="flex items-center gap-4 mb-12">
+            <h2 class="text-3xl font-bold text-white">Sertifikalarım & Başarılar</h2>
+            <div class="h-1 flex-1 bg-gray-700 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            
+            <div class="group relative rounded-xl overflow-hidden border border-gray-700 shadow-lg bg-gray-900 zoomable cursor-zoom-in">
+                <img src="img/tasarim.png" class="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
+                    <span class="text-white font-medium text-sm">Tasarım ve Üretim</span>
+                </div>
+            </div>
+
+            <div class="group relative rounded-xl overflow-hidden border border-gray-700 shadow-lg bg-gray-900 zoomable cursor-zoom-in">
+                <img src="img/elektronik.png" class="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
+                    <span class="text-white font-medium text-sm">Elektronik Programlama</span>
+                </div>
+            </div>
+
+            <div class="group relative rounded-xl overflow-hidden border border-gray-700 shadow-lg bg-gray-900 zoomable cursor-zoom-in">
+                <img src="img/havacilik.png" class="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
+                    <span class="text-white font-medium text-sm">Havacılık ve Uzay</span>
+                </div>
+            </div>
+
+            <div class="group relative rounded-xl overflow-hidden border border-gray-700 shadow-lg bg-gray-900 zoomable cursor-zoom-in">
+                <img src="img/mobil.png" class="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
+                    <span class="text-white font-medium text-sm">Mobil Uygulama Geliştirme</span>
+                </div>
+            </div>
+
+            <div class="group relative rounded-xl overflow-hidden border border-gray-700 shadow-lg bg-gray-900 zoomable cursor-zoom-in">
+                <img src="img/nano.png" class="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
+                    <span class="text-white font-medium text-sm">Nanoteknoloji</span>
+                </div>
+            </div>
+
+            <div class="group relative rounded-xl overflow-hidden border-2 border-green-500 shadow-green-900/20 shadow-xl bg-gray-900 zoomable cursor-zoom-in transform md:scale-105">
+                <div class="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded">MEZUNİYET</div>
+                <img src="img/mezun.png" class="w-full h-56 object-cover opacity-90 group-hover:opacity-100 transition duration-300 group-hover:scale-105">
+                <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900 to-transparent p-4">
+                    <span class="text-green-400 font-bold text-sm">Deneyap Mezuniyet Diploması</span>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
-<!-- IMAGE MODAL -->
-<div id="imgModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center z-50">
-    <img id="modalImg" class="max-w-[90%] max-h-[90%] rounded-xl shadow-2xl">
+<footer class="text-center text-sm text-gray-600 py-8 border-t border-gray-800 bg-gray-900">
+    © 2026 Şevket Akbulut • Tüm Hakları Saklıdır.
+</footer>
+
+<div id="imgModal" class="fixed inset-0 bg-black/95 backdrop-blur-sm hidden items-center justify-center z-[100] p-4 cursor-zoom-out transition-opacity duration-300">
+    <button class="absolute top-5 right-5 text-white text-4xl font-bold hover:text-green-500 z-[101]">&times;</button>
+    <img id="modalImg" class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain border border-gray-800">
 </div>
 
 <script>
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("modalImg");
-    document.querySelectorAll(".zoomable").forEach(img => {
-        img.addEventListener("click", () => {
-            modalImg.src = img.src;
-            modal.classList.remove("hidden");
-            modal.classList.add("flex");
+
+    // Resimlere tıklayınca aç
+    document.querySelectorAll(".zoomable").forEach(container => {
+        container.addEventListener("click", (e) => {
+            // Container tıklandıysa içindeki img'yi bul, direkt img tıklandıysa onu al
+            const img = container.tagName === 'IMG' ? container : container.querySelector("img");
+            if(img) {
+                modalImg.src = img.src;
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+                document.body.style.overflow = "hidden";
+            }
         });
     });
+
+    // Modale tıklayınca kapat
     modal.addEventListener("click", () => {
         modal.classList.add("hidden");
         modal.classList.remove("flex");
         modalImg.src = "";
+        document.body.style.overflow = "auto";
     });
 </script>
 

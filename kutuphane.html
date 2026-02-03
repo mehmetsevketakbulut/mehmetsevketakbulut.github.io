@@ -5,122 +5,141 @@
     <title>Kütüphane Otomasyon Sistemi | Şevket Akbulut</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .glass-panel { background: rgba(31, 41, 55, 0.7); backdrop-filter: blur(10px); }
+    </style>
 </head>
 
-<body class="bg-gray-900 text-gray-200">
+<body class="bg-gray-900 text-gray-200 font-sans antialiased selection:bg-green-500 selection:text-white">
 
-<!-- NAV -->
-<nav class="border-b border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-        <a href="index.html" class="text-white font-semibold hover:text-green-400">
-            ← Ana Sayfa
+<nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-slate-800 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="flex items-center gap-2 text-gray-300 hover:text-green-400 transition group">
+            <span class="text-xl group-hover:-translate-x-1 transition-transform">←</span>
+            <span class="font-semibold">Ana Sayfaya Dön</span>
         </a>
-        <span class="text-gray-400">Proje Detayı</span>
+        <span class="text-xs md:text-sm text-gray-500 border border-gray-700 px-3 py-1 rounded-full">Proje Detayı</span>
     </div>
 </nav>
 
-<!-- HERO -->
-<section class="max-w-7xl mx-auto px-6 py-16">
-    <div class="flex flex-col md:flex-row items-start gap-12">
-        <div class="md:w-2/3 space-y-6"><h1 class="text-4xl font-bold text-white mb-4">
-        Kütüphane Otomasyon Sistemi
-    </h1>
-    <p class="text-gray-400 max-w-3xl">
-Python ve nesne yönelimli programlama prensipleri kullanılarak geliştirilen, kütüphaneler için kapsamlı bir web tabanlı otomasyon sistemi.
-Kullanıcılar kitapları görüntüleyebilir, ödünç alıp iade edebilir, gecikme cezası otomatik hesaplanır ve kayıt altına alınır.
-Adminler kitap, yazar ve kategori yönetimini gerçekleştirebilir; tüm işlemler frontend üzerinden gerçek zamanlı olarak veritabanına yansır.
-    </p></div>
-    <div class="md:w-1/3 flex justify-center md:justify-end">
-            <img src="img/kutup.png" alt="Kütüphane Otomasyon Sistemi"
-                 class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border-4 border-gray-700 shadow-lg">
+<section class="pt-32 pb-12 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+            
+            <div class="lg:w-3/5 space-y-6">
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-xs font-medium text-blue-300 bg-blue-900/30 border border-blue-800 rounded-full">Python</span>
+                    <span class="px-3 py-1 text-xs font-medium text-yellow-300 bg-yellow-900/30 border border-yellow-800 rounded-full">SQLAlchemy</span>
+                    <span class="px-3 py-1 text-xs font-medium text-green-300 bg-green-900/30 border border-green-800 rounded-full">Flask</span>
+                </div>
+
+                <h1 class="text-4xl md:text-5xl font-bold text-white leading-tight">
+                    Kütüphane <span class="text-green-500">Otomasyon</span> Sistemi
+                </h1>
+                
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Python ve nesne yönelimli programlama (OOP) prensipleri temel alınarak geliştirilmiş, kütüphane yönetimini dijitalleştiren kapsamlı bir web tabanlı otomasyon projesi. 
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="https://github.com/mehmetsevketakbulut/my_smart_library_system2.git" target="_blank" class="flex items-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg transition shadow-lg shadow-green-900/20">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub Reposu
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:w-2/5 flex justify-center lg:justify-end">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                    <img src="img/kutup.png" alt="Kütüphane Otomasyon Sistemi"
+                         class="relative w-full max-w-sm rounded-2xl shadow-2xl border border-gray-700 bg-gray-800 object-cover transform transition duration-500 hover:scale-[1.02]">
+                </div>
+            </div>
+
         </div>
-        </div>
-    
+    </div>
 </section>
 
-<!-- PROJE AÇIKLAMASI + FOTOĞRAF -->
-<section class="max-w-7xl mx-auto px-6 py-16">
-    <div class="flex flex-col md:flex-row items-start gap-12">
+<section class="max-w-7xl mx-auto px-6 py-8">
+    <div class="bg-gray-800/50 border border-gray-700 p-8 rounded-2xl">
+        <h2 class="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            Proje Hakkında
+        </h2>
+        <p class="text-gray-300 leading-relaxed">
+            Bu proje, kütüphanelerdeki kitap ve kullanıcı işlemlerini modernize etmek amacıyla geliştirilmiştir. 
+            Backend tarafında iş mantığı <strong>Python</strong> ile kurgulanmış, veritabanı iletişimi <strong>SQLAlchemy ORM</strong> 
+            sayesinde güvenli ve modüler bir yapıya kavuşturulmuştur. 
+            <br><br>
+            Sistem; kitap arama, ödünç alma/verme döngüsü, otomatik gecikme cezası hesaplama ve gelişmiş admin paneli gibi 
+            kritik fonksiyonları barındırır. Tüm işlemler anlık olarak loglanır ve veri tutarlılığı sağlanır.
+        </p>
+    </div>
+</section>
 
-        <!-- SOL: Proje Açıklaması -->
-        <div class="md:w-2/3 space-y-6">
-            <h2 class="text-2xl font-semibold text-white">Proje Açıklaması</h2>
-            <p class="text-gray-400">
-                Bu proje, kütüphanelerdeki kitap ve kullanıcı işlemlerini yönetmek için geliştirilmiş
-                kapsamlı bir web tabanlı otomasyon sistemidir. Python ve nesne yönelimli programlama
-                prensipleri kullanılarak backend’de iş mantığı oluşturulmuş, SQLAlchemy ORM ile
-                veritabanı işlemleri güvenli ve okunabilir şekilde yönetilmiştir. Kullanıcılar
-                kitapları görüntüleyebilir, arama yapabilir, ödünç alıp iade edebilir; gecikme
-                cezaları otomatik hesaplanır ve oluşan kayıtlar trigger ile loglanır.  
-                Admin kullanıcılar kitap, yazar ve kategori yönetimini gerçekleştirebilir ve sistem
-                üzerinde tüm işlemleri gerçek zamanlı olarak takip edebilir.  
-                Sistem, kullanıcı dostu bir arayüz ile kütüphane operasyonlarını hızlı, güvenli ve
-                verimli şekilde dijitalleştirir.  
-                
+<section class="max-w-7xl mx-auto px-6 py-12 pb-24">
+    <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 hover:border-green-500/50 transition duration-300">
+            <div class="w-12 h-12 bg-green-900/20 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Öne Çıkan Özellikler</h3>
+            <ul class="space-y-3 text-gray-400 text-sm">
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500 mt-1">▹</span> Kitap CRUD işlemleri (Ekle/Sil/Güncelle)
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500 mt-1">▹</span> Rol tabanlı yetkilendirme (Admin/User)
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500 mt-1">▹</span> Otomatik ceza hesaplama sistemi
+                </li>
+                <li class="flex items-start gap-2">
+                    <span class="text-green-500 mt-1">▹</span> Trigger destekli loglama yapısı
+                </li>
+            </ul>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 hover:border-blue-500/50 transition duration-300">
+            <div class="w-12 h-12 bg-blue-900/20 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Teknik Kazanımlar</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+                Bu proje ile Python ve web tabanlı OOP mimarisini gerçek hayat senaryosunda deneyimledim.
             </p>
+            <ul class="space-y-2 text-gray-400 text-sm">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> ORM & Veritabanı Modelleme</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Modüler Backend Mimarisi</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Full-Stack Entegrasyonu</li>
+            </ul>
+        </div>
+
+        <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700 hover:border-yellow-500/50 transition duration-300">
+            <div class="w-12 h-12 bg-yellow-900/20 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Teknoloji Yığını</h3>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Python</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Flask</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">MySQL</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">SQLAlchemy</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">HTML/CSS</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Bootstrap</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">Flask-Mail</span>
+                <span class="px-2 py-1 bg-gray-700 rounded text-xs text-gray-300">OOP</span>
+            </div>
         </div>
 
     </div>
 </section>
 
-
-
-<!-- ÖNE ÇIKANLAR, KAZANIMLAR, GITHUB -->
-<section class="max-w-7xl mx-auto px-6 py-8 space-y-8">
-
-    <!-- ÖNE ÇIKAN ÖZELLİKLER -->
-<div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-    <h3 class="text-white font-semibold mb-2">Öne Çıkan Özellikler</h3>
-    <ul class="list-disc list-inside text-gray-400 space-y-2">
-        <li>Kitap ekleme, silme ve güncelleme işlemleri</li>
-        <li>Kullanıcı kayıt, rol yönetimi ve yetkilendirme</li>
-        <li>Ödünç alma, iade ve gecikme cezası takibi</li>
-        <li>OOP prensipleri: Encapsulation, Inheritance ve Polymorphism</li>
-        <li>Gerçek zamanlı frontend-backend entegrasyonu</li>
-        <li>Otomatik ceza hesaplama ve trigger ile log kaydı</li>
-        <li>Arama ve filtreleme ile kullanıcı dostu deneyim</li>
-    </ul>
-</div>
-
-<!-- KAZANIMLAR -->
-<div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-    <h3 class="text-white font-semibold mb-2">Kazanımlar</h3>
-    <p class="text-gray-400">
-        Bu proje sayesinde Python ve web tabanlı OOP mantığını gerçek bir problem
-        üzerinde uygulama deneyimi kazandım. Nesne yönelimli tasarımın avantajlarını,
-        modülerlik ve veri yönetimi prensiplerini kavradım. Ayrıca veritabanı ilişkilerini
-        modelleme, SQLAlchemy ORM kullanımı ve frontend-backend entegrasyonu konusunda
-        pratik yaptım.
-    </p>
-</div>
-
-<!-- TEKNOLOJİLER -->
-<div class="bg-gray-800 p-6 rounded-lg border border-gray-700">
-    <h3 class="text-white font-semibold mb-2">Teknolojiler</h3>
-    <ul class="list-disc list-inside text-gray-400 space-y-2">
-        <li>Python </li>
-        <li>Flask </li>
-        <li>SQLAlchemy ORM </li>
-        <li>MySQL </li>
-        <li>HTML / CSS / Bootstrap </li>
-        <li>Flask-Mail</li>
-        <li>itsdangerous </li>
-        <li>OOP (Encapsulation, Inheritance, Polymorphism) </li>
-    </ul>
-</div>
-
-
-    <!-- GITHUB -->
-    <a href="https://github.com/mehmetsevketakbulut/my_smart_library_system2.git"
-       target="_blank"
-       class="block text-center bg-green-500 text-gray-900 py-3 rounded hover:bg-green-400">
-        GitHub Repo
-    </a>
-
-</section>
-
-<footer class="text-center text-sm text-gray-600 py-6">
-    © 2026 Şevket Akbulut
+<footer class="text-center text-sm text-gray-600 py-8 border-t border-gray-800 bg-gray-900">
+    © 2026 Şevket Akbulut • Tüm Hakları Saklıdır.
 </footer>
 
 </body>
